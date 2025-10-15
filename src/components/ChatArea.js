@@ -131,7 +131,7 @@ function ChatArea({ user, selectedChat }) {
 
   return (
     <div className="chat-area">
-      {/* Chat Header */}
+     
       <div className="chat-header">
         <div className="chat-header-info">
           <div className="chat-avatar">

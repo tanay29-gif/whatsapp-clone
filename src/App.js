@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebase';
-import { saveUserToFirestore } from './utils/userUtils';
-import Sidebar from './components/Sidebar';
-import ChatArea from './components/ChatArea';
-import Login from './components/Login';
-import './App.css';
+import { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
+import { saveUserToFirestore } from "./utils/userUtils";
+import Sidebar from "./components/Sidebar";
+import ChatArea from "./components/ChatArea";
+import Login from "./components/Login";
+import "./App.css";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,15 +42,12 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar 
-        user={user}
-        selectedChat={selectedChat} 
-        onChatSelect={handleChatSelect}
-      />
-      <ChatArea 
+      <Sidebar
         user={user}
         selectedChat={selectedChat}
+        onChatSelect={handleChatSelect}
       />
+      <ChatArea user={user} selectedChat={selectedChat} />
     </div>
   );
 }

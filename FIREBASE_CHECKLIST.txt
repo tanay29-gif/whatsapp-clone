@@ -1,0 +1,57 @@
+FIREBASE SETUP CHECKLIST
+========================
+
+Use this checklist to ensure you've completed all Firebase setup steps.
+
+□ Step 1: Create Firebase Project
+  □ Created project in Firebase Console
+  □ Project name noted: ___________________
+
+□ Step 2: Register Web App
+  □ Added web app to Firebase project
+  □ App nickname: ___________________
+  □ Copied Firebase configuration
+
+□ Step 3: Enable Authentication
+  □ Opened Authentication section
+  □ Enabled Google sign-in provider
+  □ Selected support email
+  □ Saved authentication settings
+
+□ Step 4: Set Up Firestore Database
+  □ Created Firestore Database
+  □ Selected production mode
+  □ Chose database location: ___________________
+  □ Updated security rules with provided rules
+
+□ Step 5: Create Firestore Index
+  □ Created composite index for 'chats' collection
+  □ Fields: participants (Array-contains), lastMessageTime (Descending)
+  □ Index build complete (or waiting for completion)
+
+□ Step 6: Update Environment Variables
+  □ Updated REACT_APP_FIREBASE_API_KEY
+  □ Updated REACT_APP_FIREBASE_AUTH_DOMAIN
+  □ Updated REACT_APP_FIREBASE_PROJECT_ID
+  □ Updated REACT_APP_FIREBASE_STORAGE_BUCKET
+  □ Updated REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+  □ Updated REACT_APP_FIREBASE_APP_ID
+  □ Updated REACT_APP_FIREBASE_MEASUREMENT_ID
+
+□ Step 7: Test Application
+  □ Restarted development server
+  □ Opened app in browser
+  □ Successfully signed in with Google
+  □ Profile created in Firestore
+  □ Created a test chat
+  □ Sent test messages
+  □ Messages appear in real-time
+
+TROUBLESHOOTING NOTES:
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+
+COMPLETION DATE: ___________________
+

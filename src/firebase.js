@@ -3,7 +3,7 @@ import { getFirestore, serverTimestamp } from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
-// Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyCs318hjwaNxDAdBtQwxQE6coH8eO_vXK8",
   authDomain: "whats-5e636.firebaseapp.com",
@@ -15,17 +15,15 @@ const firebaseConfig = {
 };
 
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 export const provider = new GoogleAuthProvider();
 export const timestamp = serverTimestamp;
 
-// Authentication functions
 export const signInWithGoogle = async () => {
   try {
     return await signInWithPopup(auth, provider);

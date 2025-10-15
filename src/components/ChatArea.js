@@ -30,7 +30,7 @@ function ChatArea({ user, selectedChat }) {
       return;
     }
 
-    // Listen to messages in real-time
+    
     const messagesRef = collection(db, 'chats', selectedChat.id, 'messages');
     const q = query(messagesRef, orderBy('timestamp', 'asc'));
 
@@ -60,10 +60,10 @@ function ChatArea({ user, selectedChat }) {
         read: false
       };
 
-      // Add message to subcollection
+     
       await addDoc(collection(db, 'chats', selectedChat.id, 'messages'), messageData);
 
-      // Update last message in chat document
+     
       const chatRef = doc(db, 'chats', selectedChat.id);
       await updateDoc(chatRef, {
         lastMessage: message,
@@ -148,7 +148,7 @@ function ChatArea({ user, selectedChat }) {
         </div>
       </div>
 
-      {/* Messages Area */}
+    
       <div className="messages-area">
         {messages.length === 0 ? (
           <div className="no-messages">
@@ -167,7 +167,7 @@ function ChatArea({ user, selectedChat }) {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area */}
+    
       <div className="input-area">
         <div className="input-actions-left">
           <BsEmojiSmile 

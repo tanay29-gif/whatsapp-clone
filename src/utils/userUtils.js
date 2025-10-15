@@ -9,7 +9,7 @@ export const saveUserToFirestore = async (user) => {
     const userSnap = await getDoc(userRef);
 
     if (!userSnap.exists()) {
-      // Create new user document
+     
       await setDoc(userRef, {
         name: user.displayName,
         email: user.email,
@@ -18,7 +18,7 @@ export const saveUserToFirestore = async (user) => {
         lastSeen: serverTimestamp()
       });
     } else {
-      // Update last seen
+      
       await setDoc(userRef, {
         lastSeen: serverTimestamp()
       }, { merge: true });
